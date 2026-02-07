@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Arbitrage Shop - Équipement d'Arbitrage Professionnel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Variables et styles de base */
+        :root {
+            --primary-color: #006400; /* Vert football */
+            --secondary-color: #FF0000; /* Rouge carton */
+            --accent-color: #FFD700; /* Jaune carton */
+            --light-color: #f8f9fa;
+            --dark-color: #1a1a1a;
+            --text-color: #333;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* En-tête */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .logo i {
+            color: var(--accent-color);
+            margin-right: 10px;
+        }
+
+        .logo span {
+            color: white;
+        }
+
+        .mad-currency {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 5px 0;
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            left: 0;
+            bottom: 0;
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Section héros */
+        .hero {
+            background: linear-gradient(rgba(0, 100, 0, 0.9), rgba(0, 100, 0, 0.9)), url('https://images.unsplash.com/photo-1575361204480-aadea25e6e68?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero h1 .whistle {
+            color: var(--accent-color);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: #cc0000;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-yellow {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+        }
+
+        .btn-yellow:hover {
+            background-color: #e6c300;
+        }
+
+        /* Section à propos */
+        .about {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            display: inline-block;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Section produits */
+        .products {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .product-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            background-color: white;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            z-index: 2;
+        }
+
+        .product-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-category {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .product-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .product-description {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            min-height: 60px;
+        }
+
+        .product-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .price .currency {
+            font-size: 1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 1rem;
+            margin-right: 10px;
+        }
+
+        /* Section avantages */
+        .advantages {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .advantage-card {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            background-color: var(--light-color);
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-5px);
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .advantage-card:hover h3,
+        .advantage-card:hover p {
+            color: white;
+        }
+
+        .advantage-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .advantage-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .advantage-card p {
+            color: #666;
+        }
+
+        /* Section contact */
+        .contact {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 30px;
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-item i {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-form textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Pied de page */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: var(--secondary-color);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+
+        .payment-methods {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .payment-method {
+            background-color: white;
+            color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-color);
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 0 0 15px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 70px 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .about, .products, .advantages, .contact {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-whistle"></i>
+                <span>Arbitrage</span>Football.<span class="mad-currency">MAD</span>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#products">Produits</a></li>
+                    <li><a href="#advantages">Avantages</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section héros -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Équipement d'<span class="whistle">Arbitrage</span> Football Professionnel</h1>
+            <p>Tout l'équipement nécessaire pour arbitrer comme un pro : sifflets, cartons, chronomètres, drapeaux et bien plus encore. Prix en Dirhams Marocains (MAD). Livraison partout au Maroc.</p>
+            <a href="#products" class="btn">Voir les produits</a>
+            <a href="#contact" class="btn btn-yellow" style="margin-left: 15px;">Commander</a>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Équipement d'Arbitrage Professionnel</h2>
+            </div>
+            
+            <p class="section-subtitle">Nous fournissons aux arbitres, clubs et écoles de football tout l'équipement nécessaire pour des matchs officiels et entraînements.</p>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Fournisseur Officiel d'Équipement d'Arbitrage</h3>
+                    <p>Spécialisés dans la vente d'équipement d'arbitrage de football depuis 5 ans, nous fournissons des produits de qualité professionnelle aux arbitres, clubs, écoles et fédérations à travers le Maroc.</p>
+                    <p>Tous nos produits respectent les normes FIFA et sont utilisés dans les compétitions officielles. Nous importons directement des fabricants européens pour garantir la meilleure qualité au meilleur prix.</p>
+                    <p>Notre équipement est utilisé par des arbitres de la Botola, du Championnat National et des ligues régionales. Nous sommes fiers de contribuer au développement de l'arbitrage au Maroc.</p>
+                    <a href="#contact" class="btn">Devenir Fournisseur</a>
+                </div>
+                
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1575361204480-aadea25e6e68?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Équipement d'arbitrage de football">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Produits -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Produits</h2>
+            </div>
+            
+            <p class="section-subtitle">Tous nos prix sont en Dirhams Marocains (MAD). Livraison gratuite à partir de 500 MAD d'achat.</p>
+            
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">Tous les produits</button>
+                <button class="filter-btn" data-filter="sifflets">Sifflets</button>
+                <button class="filter-btn" data-filter="cartons">Cartons</button>
+                <button class="filter-btn" data-filter="chronometres">Chronomètres</button>
+                <button class="filter-btn" data-filter="kits">Kits Complets</button>
+            </div>
+            
+            <div class="products-grid" id="productsGrid">
+                <!-- Les produits seront générés dynamiquement par JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Avantages -->
+    <section class="advantages" id="advantages">
+        <div class="container">
+            <div class="section-title">
+                <h2>Pourquoi Nous Choisir ?</h2>
+            </div>
+            
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Livraison Rapide</h3>
+                    <p>Expédition sous 24-48h dans tout le Maroc. Suivi de colis disponible.</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Qualité Professionnelle</h3>
+                    <p>Tous nos produits respectent les normes FIFA et sont approuvés pour compétitions officielles.</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Prix en MAD</h3>
+                    <p>Pas de conversion, pas de frais cachés. Tous les prix affichés sont en Dirhams.</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Support Client</h3>
+                    <p>Équipe dédiée disponible 7j/7 pour répondre à vos questions avant et après achat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contactez-Nous</h2>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Commandez dès maintenant</h3>
+                    <p>Pour commander ou avoir plus d'informations sur nos produits d'arbitrage, contactez-nous par téléphone, WhatsApp ou via le formulaire.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Adresse</strong>
+                                <p>Complexe Sportif, Avenue Hassan II, Casablanca, Maroc</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Téléphone / WhatsApp</strong>
+                                <p>+212 6 XX XX XX XX</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p>contact@arbitragefootball.ma</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-methods">
+                        <div class="payment-method">Cash à la livraison</div>
+                        <div class="payment-method">Virement Bancaire</div>
+                        <div class="payment-method">CMI</div>
+                        <div class="payment-method">PayPal</div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Téléphone *</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="city">Ville *</label>
+                            <input type="text" id="city" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="product">Produit qui vous intéresse</label>
+                            <select id="product">
+                                <option value="">Sélectionnez un produit</option>
+                                <option value="sifflet">Sifflets d'arbitrage</option>
+                                <option value="carton">Cartons (jaune/rouge)</option>
+                                <option value="kit">Kit arbitrage complet</option>
+                                <option value="chrono">Chronomètres</option>
+                                <option value="drapeau">Drapeaux d'arbitrage</option>
+                                <option value="autre">Autre équipement</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Décrivez votre commande ou posez vos questions..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Envoyer la demande</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ArbitrageFootball.MA</h3>
+                    <p>Votre fournisseur d'équipement d'arbitrage de football professionnel au Maroc. Qualité, fiabilité et prix compétitifs en Dirhams.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Catégories</h3>
+                    <ul>
+                        <li><a href="#products" data-filter="sifflets">Sifflets d'Arbitrage</a></li>
+                        <li><a href="#products" data-filter="cartons">Cartons Jaunes/Rouges</a></li>
+                        <li><a href="#products" data-filter="chronometres">Chronomètres</a></li>
+                        <li><a href="#products" data-filter="kits">Kits Arbitrage Complets</a></li>
+                        <li><a href="#products">Drapeaux d'Arbitre</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#products">Produits</a></li>
+                        <li><a href="#advantages">Avantages</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Zone de Livraison</h3>
+                    <p>Nous livrons dans toutes les villes du Maroc : Casablanca, Rabat, Marrakech, Fès, Tanger, Agadir, Meknès, Oujda, et partout ailleurs.</p>
+                    <p><strong>Livraison gratuite</strong> à partir de 500 MAD d'achat.</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 ArbitrageFootball.MA - Tous droits réservés. | Équipement d'arbitrage de football professionnel.</p>
+                <p style="margin-top: 10px;">Les prix sont en Dirhams Marocains (MAD). Photos non contractuelles.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Données des produits en Dirhams (MAD)
+        const products = [
+            {
+                id: 1,
+                name: "Sifflet d'Arbitrage Fox 40",
+                category: "sifflets",
+                description: "Sifflet professionnel Fox 40 Classic. Son puissant et clair. Utilisé par la FIFA.",
+                price: 89,
+                originalPrice: 120,
+                image: "https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                badge: "BEST SELLER"
+            },
+            {
+                id: 2,
+                name: "Sifflet Acme Thunderer",
+                category: "sifflets",
+                description: "Sifflet Thunderer 580. Son distinctif, idéal pour les grands stades.",
+                price: 75,
+                originalPrice: 95,
+                image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                badge: "POPULAIRE"
+            },
+            {
+                id: 3,
+                name: "Cartons Jaune et Rouge Pro",
+                category: "cartons",
+                description: "Set de 2 cartons plastifiés qualité pro. Dimensions officielles 12x9cm.",
+                price: 45,
+                originalPrice: 60,
+                image: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                badge: "OFFICIEL"
+            },
+            {
+                id: 4,
+                name: "Cartons avec Étui Cuir",
+                category: "cartons",
+                description: "Cartons jaune/rouge avec étui en cuir professionnel. Porté à la ceinture.",
+                price: 120,
+                originalPrice: 150,
+                image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 5,
+                name: "Chronomètre d'Arbitre Numérique",
+                category: "chronometres",
+                description: "Chronomètre digital avec compte à rebours et mémoires. Étanche.",
+                price: 180,
+                originalPrice: 220,
+                image: "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                badge: "NOUVEAU"
+            },
+            {
+                id: 6,
+                name: "Kit Arbitrage Complet Débutant",
+                category: "kits",
+                description: "Kit complet: sifflet Fox, cartons, chrono, drapeau, sac. Parfait pour débutants.",
+                price: 320,
+                originalPrice: 400,
+                image: "https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                badge: "PROMO"
+            },
+            {
+                id: 7,
+                name: "Kit Arbitrage Professionnel",
+                category: "kits",
+                description: "Kit pro avec sifflet Acme, cartons cuir, chrono avancé, 2 drapeaux, sac professionnel.",
+                price: 550,
+                originalPrice: 690,
+                image: "https://images.unsplash.com/photo-1519861531473-920034658307?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                badge: "PRO"
+            },
+            {
+                id: 8,
+                name: "Drapeaux d'Arbitre Assistant",
+                category: "autre",
+                description: "Set de 2 drapeaux d'arbitre assistant. Manche léger, tissu fluo visible.",
+                price: 65,
+                originalPrice: 85,
+                image: "https://images.unsplash.com/photo-1511882150382-421056c89033?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            }
+        ];
+
+        // Initialisation du site
+        document.addEventListener('DOMContentLoaded', function() {
+            // Afficher les produits
+            const productsGrid = document.getElementById('productsGrid');
+            
+            function displayProducts(filter = 'all') {
+                productsGrid.innerHTML = '';
+                
+                const filteredProducts = filter === 'all' 
+                    ? products 
+                    : products.filter(product => product.category === filter);
+                
+                filteredProducts.forEach(product => {
+                    const productCard = document.createElement('div');
+                    productCard.className = 'product-card';
+                    productCard.innerHTML = `
+                        ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
+                        <div class="product-image">
+                            <img src="${product.image}" alt="${product.name}">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">${getCategoryName(product.category)}</span>
+                            <h3 class="product-title">${product.name}</h3>
+                            <p class="product-description">${product.description}</p>
+                            <div class="product-price">
+                                <div>
+                                    ${product.originalPrice ? `<span class="original-price">${product.originalPrice} MAD</span>` : ''}
+                                    <span class="price">${product.price} <span class="currency">MAD</span></span>
+                                </div>
+                                <button class="btn add-to-cart" data-id="${product.id}">Commander</button>
+                            </div>
+                        </div>
+                    `;
+                    productsGrid.appendChild(productCard);
+                });
+                
+                // Réattacher les événements aux boutons
+                attachCartEvents();
+            }
+            
+            function getCategoryName(category) {
+                const categories = {
+                    'sifflets': 'Sifflets',
+                    'cartons': 'Cartons',
+                    'chronometres': 'Chronomètres',
+                    'kits': 'Kits Complets',
+                    'autre': 'Accessoires'
+                };
+                return categories[category] || category;
+            }
+            
+            // Afficher tous les produits au début
+            displayProducts();
+            
+            // Gestion des filtres
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Retirer la classe active de tous les boutons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Ajouter la classe active au bouton cliqué
+                    this.classList.add('active');
+                    
+                    // Filtrer les produits
+                    const filter = this.getAttribute('data-filter');
+                    displayProducts(filter);
+                });
+            });
+            
+            // Gestion du menu mobile
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                    ? '<i class="fas fa-times"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+            });
+            
+            // Gestion du formulaire de contact
+            const contactForm = document.getElementById('contactForm');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value;
+                const phone = document.getElementById('phone').value;
+                
+                alert(`Merci ${name} ! Votre demande a été envoyée. Nous vous contacterons au ${phone} dans les plus brefs délais.`);
+                contactForm.reset();
+            });
+            
+            // Fonction pour attacher les événements aux boutons d'achat
+            function attachCartEvents() {
+                const addToCartButtons = document.querySelectorAll('.add-to-cart');
+                addToCartButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        const productId = this.getAttribute('data-id');
+                        const product = products.find(p => p.id == productId);
+                        
+                        const message = `Commande de "${product.name}"\n\nPrix: ${product.price} MAD\n\nPour finaliser votre commande, veuillez:\n1. Appeler le 06 XX XX XX XX\n2. Ou remplir le formulaire de contact\n3. Ou envoyer un WhatsApp avec le nom du produit`;
+                        
+                        alert(message);
+                    });
+                });
+            }
+            
+            // Fermer le menu mobile au clic sur un lien
+            const navLinks = document.querySelectorAll('nav a, .footer-column a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Si c'est un lien de filtre dans le footer
+                    if (this.hasAttribute('data-filter')) {
+                        e.preventDefault();
+                        const filter = this.getAttribute('data-filter');
+                        
+                        // Activer le bouton de filtre correspondant
+                        filterButtons.forEach(btn => {
+                            btn.classList.remove('active');
+                            if (btn.getAttribute('data-filter') === filter) {
+                                btn.classList.add('active');
+                            }
+                        });
+                        
+                        // Afficher les produits filtrés
+                        displayProducts(filter);
+                        
+                        // Scroller vers les produits
+                        document.getElementById('products').scrollIntoView({behavior: 'smooth'});
+                    }
+                    
+                    if (mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                });
+            });
+            
+            // Attacher les événements initiaux
+            attachCartEvents();
+        });
+
+        // Animation au défilement
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.padding = '10px 0';
+                header.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.padding = '15px 0';
+                header.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
